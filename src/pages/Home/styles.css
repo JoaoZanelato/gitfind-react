@@ -41,6 +41,9 @@ button {
   color: #ffffff;
 }
 
+button:hover{
+  opacity: 0.6;
+}
 .profile {
   display: flex;
   margin: 40px 0;

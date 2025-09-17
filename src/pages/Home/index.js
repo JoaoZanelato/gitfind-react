@@ -72,7 +72,7 @@ function App() {
                     key={key}
                     title={repo.name}
                     description={repo.description}
-                    url={repo.html_url}
+                    html_url={repo.html_url}
                   />
                 ))}
               </>
