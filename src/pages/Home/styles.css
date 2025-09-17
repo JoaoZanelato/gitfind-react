@@ -3,7 +3,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
-  font-family: 'Roboto';
+  font-family: "Roboto";
 }
 
 .background {
@@ -41,9 +41,10 @@ button {
   color: #ffffff;
 }
 
-button:hover{
+button:hover {
   opacity: 0.6;
 }
+
 .profile {
   display: flex;
   margin: 40px 0;
@@ -55,7 +56,6 @@ button:hover{
   border-radius: 60px;
   border: 2px solid #e5e5e5;
   margin-right: 32px;
-
 }
 
 .profile h3 {

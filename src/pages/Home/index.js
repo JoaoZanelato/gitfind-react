@@ -8,21 +8,18 @@ function App() {
   const [currentUser, setCurrentUser] = useState(null);
   const [repos, setRepos] = useState(null);
   async function handleFetch() {
-
-    const responseUser = await fetch(
-      `https://api.github.com/users/${user}`
-    );
-     const userJSON = await responseUser.json();
-     if (userJSON.name) {
-      const {name, avatar_url, bio, login} = userJSON
-      setCurrentUser({name, avatar_url, bio, login});
+    const responseUser = await fetch(`https://api.github.com/users/${user}`);
+    const userJSON = await responseUser.json();
+    if (userJSON.name) {
+      const { name, avatar_url, bio, login } = userJSON;
+      setCurrentUser({ name, avatar_url, bio, login });
     }
-    
+
     const responseRepos = await fetch(
       `https://api.github.com/users/${user}/repos`
     );
     const reposJSON = await responseRepos.json();
-     if (reposJSON.length) {
+    if (reposJSON.length) {
       setRepos(reposJSON);
     }
   }
@@ -56,8 +53,10 @@ function App() {
                 alt="profile-pic"
               />
               <div>
-                <h3>{currentUser.name}</h3>
-                <span>{currentUser.login}</span>
+                <a href={currentUser.html_url} target="blank">
+                  <h3>{currentUser.name}</h3>
+                </a>
+                <span>@{currentUser.login}</span>
                 <p>{currentUser.bio}</p>
               </div>
             </div>

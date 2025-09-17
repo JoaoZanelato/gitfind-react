@@ -5,7 +5,9 @@
 body {
   background-color: #1d2128;
 }
-
+a {
+  text-decoration: none;
+}
 hr {
   background-color: #e5e5e533;
   border: 1px solid #e5e5e533;
