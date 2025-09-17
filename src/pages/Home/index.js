@@ -1,6 +1,7 @@
 import { Header } from "../../components/Header";
 import background from '../../assets/background.png'
 import './styles.css'
+import ItemList from "../../components/ItemList";
 function App() {
   return <div className="App">
     <Header/>
@@ -27,6 +28,12 @@ function App() {
           </div>
         </div>
         <hr/>
+        <div>
+          <h4 className="repositorios">
+            Repositórios
+          </h4>
+            <ItemList title="macacolandia" description="macacos"/>
+        </div>
       </div>
     </div>
   </div>;
