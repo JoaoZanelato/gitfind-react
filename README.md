@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# GitFind
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![GitHub repo size](https://img.shields.io/github/repo-size/joaozanelato/gitfind-react?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/joaozanelato/gitfind-react?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/joaozanelato/gitfind-react?style=for-the-badge)
+![Bitbucket open issues](https://img.shields.io/bitbucket/issues/joaozanelato/gitfind-react?style=for-the-badge)
+![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/joaozanelato/gitfind-react?style=for-the-badge)
 
-## Available Scripts
+<img src="https://i.postimg.cc/LX8Y0BP1/image.png" alt="image">
 
-In the project directory, you can run:
+> Visão da página inicial com uma pesquisa já realizada, listando o perfil e os repositórios, podendo navegar diretamente para eles ao clicar no título de cada.
 
-### `npm start`
+## 🚀 Sobre o Projeto
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+O **GitFind** é uma interface web que permite aos usuários pesquisar perfis do GitHub de forma rápida e eficiente. Ao inserir um nome de usuário, a aplicação consome a API do GitHub para buscar e exibir informações detalhadas do perfil, como avatar, nome, nome de usuário e biografia, além de uma lista completa dos repositórios públicos daquele usuário.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Este projeto foi desenvolvido como uma forma de praticar o consumo de APIs e a construção de componentes dinâmicos com React.
 
-### `npm test`
+### ✨ Funcionalidades
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-   **Busca de Usuários**: Campo de busca para encontrar qualquer perfil no GitHub.
+-   **Visualização de Perfil**: Exibe informações essenciais do usuário, como nome, avatar, nome de usuário, biografia e link direto para o perfil.
+-   **Listagem de Repositórios**: Apresenta uma lista dos repositórios públicos do usuário pesquisado, com links diretos para cada um.
+-   **Interface Responsiva**: Layout que se adapta a diferentes tamanhos de tela.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ Tecnologias Utilizadas
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+O projeto foi construído utilizando as seguintes tecnologias:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-   **React**: Biblioteca principal para a construção da interface.
+-   **HTML5 & CSS3**: Estruturação e estilização da aplicação.
+-   **JavaScript**: Linguagem de programação para a lógica do projeto.
+-   **GitHub API**: Para busca de dados de usuários e repositórios.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## ⚙️ Como Executar
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Siga os passos abaixo para executar o projeto localmente.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### **Pré-requisitos**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+-   [Node.js](https://nodejs.org/en/) (versão 14 ou superior)
+-   [npm](https://www.npmjs.com/) ou [Yarn](https://yarnpkg.com/)
 
-## Learn More
+### **Instalação**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1.  Clone o repositório:
+    ```bash
+    git clone [https://github.com/joaozanelato/gitfind-react.git](https://github.com/joaozanelato/gitfind-react.git)
+    ```
+2.  Acesse o diretório do projeto:
+    ```bash
+    cd gitfind-react
+    ```
+3.  Instale as dependências:
+    ```bash
+    npm install
+    ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### **Executando a Aplicação**
 
-### Code Splitting
+Para iniciar a aplicação em modo de desenvolvimento, execute o comando:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm start
+```
 
-### Analyzing the Bundle Size
+## 📫 Contribuindo para **GitFind**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Para contribuir com **GitFind**, siga estas etapas:
 
-### Making a Progressive Web App
+1. Bifurque este repositório.
+2. Crie um branch: `git checkout -b <nome_branch>`.
+3. Faça suas alterações e confirme-as: `git commit -m '<mensagem_commit>'`
+4. Envie para o branch original: `git push origin gitfind_react / <local>`
+5. Crie a solicitação de pull.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Como alternativa, consulte a documentação do GitHub em [como criar uma solicitação pull](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📝 Licença
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
