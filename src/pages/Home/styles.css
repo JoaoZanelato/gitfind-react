@@ -26,15 +26,46 @@ input {
   background: transparent;
   font-size: 18px;
   padding: 10px;
-  width: 80%;
+  width: 85%;
 }
 
 button {
   border: 1px solid #999999;
   border-radius: 22px;
   margin-right: 12px;
-  background: #2D333B;
+  background: #2d333b;
   font-size: 18px;
   padding: 10px;
   color: #ffffff;
+}
+
+.profile {
+  display: flex;
+  margin: 40px 0;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  border: 2px solid #e5e5e5;
+  margin-right: 32px;
+
+}
+
+.profile h3 {
+  color: #999999;
+  font-size: 24px;
+  margin: 0;
+}
+.profile span {
+  display: block;
+  color: #999999;
+  font-size: 12px;
+  margin: 0;
+}
+.profile p {
+  color: #999999;
+  font-size: 12px;
+  margin: 20px 0 0 0;
 }
