@@ -1,42 +1,87 @@
 import { Header } from "../../components/Header";
-import background from '../../assets/background.png'
-import './styles.css'
+import background from "../../assets/background.png";
+import "./styles.css";
 import ItemList from "../../components/ItemList";
+import { useState } from "react";
 function App() {
-  return <div className="App">
-    <Header/>
-    <div className="content">
-      <img src={background} className="background" alt="background-app">
-      </img>
-      <div className="info">
-        <div>
-          <input name="usuario" placeholder="@username"/>
-          <button>Buscar</button>
-        </div>
-        <div className="profile">
-          <img src="https://avatars.githubusercontent.com/u/127459520?v=4" className="profile-pic" alt="profile-pic"/>
+  const [user, setUser] = useState("");
+  const [currentUser, setCurrentUser] = useState(null);
+  const [repos, setRepos] = useState(null);
+  async function handleFetch() {
+
+    const responseUser = await fetch(
+      `https://api.github.com/users/${user}`
+    );
+     const userJSON = await responseUser.json();
+     if (userJSON.name) {
+      const {name, avatar_url, bio, login} = userJSON
+      setCurrentUser({name, avatar_url, bio, login});
+    }
+    
+    const responseRepos = await fetch(
+      `https://api.github.com/users/${user}/repos`
+    );
+    const reposJSON = await responseRepos.json();
+     if (reposJSON.length) {
+      setRepos(reposJSON);
+    }
+  }
+  return (
+    <div className="App">
+      <Header />
+      <div className="content">
+        <img src={background} className="background" alt="background-app"></img>
+        <div className="info">
           <div>
-            <h3>
-              João Zanelato
-            </h3>
-            <span>
-              @JoaoZanelato
-            </span>
-            <p>
-              Descrição
-            </p>
+            <form
+              onSubmit={(evt) => {
+                evt.preventDefault();
+                handleFetch();
+              }}
+            >
+              <input
+                name="usuario"
+                placeholder="@username"
+                value={user}
+                onChange={(evt) => setUser(evt.target.value)}
+              />
+              <button type="submit">Buscar</button>
+            </form>
           </div>
-        </div>
-        <hr/>
-        <div>
-          <h4 className="repositorios">
-            Repositórios
-          </h4>
-            <ItemList title="macacolandia" description="macacos"/>
+          {currentUser ? (
+            <div className="profile">
+              <img
+                src={currentUser.avatar_url}
+                className="profile-pic"
+                alt="profile-pic"
+              />
+              <div>
+                <h3>{currentUser.name}</h3>
+                <span>{currentUser.login}</span>
+                <p>{currentUser.bio}</p>
+              </div>
+            </div>
+          ) : null}
+          <hr />
+          <div>
+            {repos ? (
+              <>
+                <h4 className="repositorios">Repositórios</h4>
+                {repos.map((repo, key) => (
+                  <ItemList
+                    key={key}
+                    title={repo.name}
+                    description={repo.description}
+                    url={repo.html_url}
+                  />
+                ))}
+              </>
+            ) : null}
+          </div>
         </div>
       </div>
     </div>
-  </div>;
+  );
 }
 
 export default App;

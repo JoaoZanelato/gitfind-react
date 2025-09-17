@@ -3,11 +3,12 @@
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
+  font-family: 'Roboto';
 }
 
 .background {
   height: 100vh;
-  position: absolute;
+  position: fixed;
   left: 0;
 }
 
@@ -26,7 +27,8 @@ input {
   background: transparent;
   font-size: 18px;
   padding: 10px;
-  width: 85%;
+  width: 80%;
+  color: #ffffff;
 }
 
 button {
