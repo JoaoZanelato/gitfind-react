@@ -7,6 +7,7 @@ import background from "../../assets/background.png";
 import "./styles.css";
 import ItemList from "../../components/ItemList";
 import { useState } from "react";
+import Button from "../../components/Button";
 import {
   adaptUserToProfile,
   adaptRepoToItemList,
@@ -71,7 +72,7 @@ function App() {
                 value={user}
                 onChange={(evt) => setUser(evt.target.value)}
               />
-              <button type="submit">Buscar</button>
+              <Button type="submit">Buscar</Button>
             </form>
           </div>
 
