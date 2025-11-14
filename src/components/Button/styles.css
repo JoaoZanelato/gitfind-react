@@ -1,0 +1,13 @@
+.search-button {
+  border: 1px solid #999999;
+  border-radius: 22px;
+  margin-right: 12px;
+  background: #2d333b;
+  font-size: 18px;
+  padding: 10px;
+  color: #ffffff;
+}
+
+.search-button:hover {
+  opacity: 0.6;
+}
