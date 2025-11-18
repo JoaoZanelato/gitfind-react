@@ -67,3 +67,8 @@ input {
   margin: 12px 0;
   text-align: center;
 }
+
+form {
+  display: flex;
+  justify-content: space-between;
+}

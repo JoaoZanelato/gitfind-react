@@ -21,6 +21,7 @@ function App() {
   const [currentUser, setCurrentUser] = useState(null);
   // Estado que guarda a lista de repositórios adaptados para exibição
   const [repos, setRepos] = useState(null);
+  const [error, setError] = useState(null);
 
   // Função assíncrona que realiza as requisições à API do GitHub
   async function handleFetch() {
@@ -33,6 +34,11 @@ function App() {
     // para o formato esperado pelos componentes desta aplicação.
     if (userJSON.name) {
       setCurrentUser(adaptUserToProfile(userJSON));
+    } else {
+      setError("Usuário não encontrado");
+      setCurrentUser(null);
+      setRepos(null);
+      return;
     }
 
     // Requisição para obter os repositórios do usuário
@@ -42,8 +48,7 @@ function App() {
     const reposJSON = await responseRepos.json();
 
     // Se houver repositórios, adaptamos cada item ANTES de salvar no estado.
-    // Isso permite manter os componentes de exibição desacoplados do formato
-    // cru da API do GitHub.
+    // Isso permite manter os componentes de exibição desacoplados do formato cru da API do GitHub.
     if (reposJSON.length) {
       const adaptedRepos = reposJSON.map(adaptRepoToItemList);
       setRepos(adaptedRepos);
@@ -111,7 +116,7 @@ function App() {
                   />
                 ))}
               </>
-            ) : null}
+            ) : error ? error : null}
           </div>
         </div>
       </div>
